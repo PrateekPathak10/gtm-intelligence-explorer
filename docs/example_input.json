@@ -1,0 +1,9 @@
+{
+  "company_or_ideal_customer": "B2B SaaS companies using HubSpot or Salesforce, with 50–500 employees and signs of sales-team expansion",
+  "research_objective": "Evaluate whether the company could benefit from an AI-powered B2B GTM and outbound prospecting service.",
+  "employee_min": 50,
+  "employee_max": 500,
+  "technologies": ["HubSpot", "Salesforce"],
+  "growth_signals": ["Sales hiring"],
+  "max_results": 8
+}

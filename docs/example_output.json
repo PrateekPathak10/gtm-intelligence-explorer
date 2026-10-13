@@ -1,0 +1,21 @@
+{
+  "note": "Illustrative schema example only. Not returned by Exa and not evidence about a real company.",
+  "company_name": "Unavailable until a live search result is normalized",
+  "domain": null,
+  "description": null,
+  "industry": null,
+  "target_market": null,
+  "employee_size": null,
+  "technology_signals": [],
+  "growth_signals": [],
+  "potential_gtm_opportunity": null,
+  "decision_makers": [],
+  "contact_information": [],
+  "evidence": [],
+  "confidence": "unavailable",
+  "fit_status": "Needs review",
+  "provider_status": {
+    "exa": "not_run",
+    "moltsets": "not_configured"
+  }
+}
