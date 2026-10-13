@@ -22,9 +22,6 @@ st.caption(
 )
 
 
-# -----------------------------
-# Sidebar: ICP and research inputs
-# -----------------------------
 with st.sidebar:
     st.header("Prospecting criteria")
 
@@ -99,9 +96,6 @@ with st.sidebar:
     )
 
 
-# -----------------------------
-# Provider status
-# -----------------------------
 col1, col2, col3 = st.columns(3)
 
 col1.metric("Research provider", "Exa")
@@ -122,9 +116,7 @@ if not settings.moltsets_api_key:
     )
 
 
-# -----------------------------
-# Run research
-# -----------------------------
+
 if search_button:
     if not company_query.strip():
         st.error("Enter a company name or ideal-customer description.")
@@ -155,9 +147,6 @@ if search_button:
                 )
 
             else:
-                # -----------------------------
-                # Summary metrics
-                # -----------------------------
                 total = len(prospects)
 
                 with_domains = sum(
@@ -187,9 +176,7 @@ if search_button:
                     "qualified leads. Review the evidence before outreach."
                 )
 
-                # -----------------------------
-                # Results table
-                # -----------------------------
+       
                 rows = []
 
                 for p in prospects:
@@ -245,9 +232,7 @@ if search_button:
                     },
                 )
 
-                # -----------------------------
-                # Individual evidence
-                # -----------------------------
+           
                 st.subheader("Company evidence and details")
 
                 for index, p in enumerate(prospects, start=1):
@@ -336,9 +321,6 @@ if search_button:
                         st.markdown("**Structured record (JSON)**")
                         st.json(p.model_dump())
 
-                # -----------------------------
-                # Downloads
-                # -----------------------------
                 st.subheader("Export results")
 
                 json_payload = json.dumps(
@@ -380,9 +362,6 @@ if search_button:
             )
 
 
-# -----------------------------
-# Data quality and limitations
-# -----------------------------
 st.divider()
 st.subheader("Data quality rules")
 

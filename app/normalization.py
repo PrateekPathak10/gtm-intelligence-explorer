@@ -75,8 +75,6 @@ INDUSTRIES = [
     "Business Consulting",
 ]
 
-# Deliberately require usage-related wording. A bare mention of a CRM
-# product is not sufficient evidence that a company uses it.
 TECHNOLOGY_USAGE_PATTERNS = {
     "HubSpot": (
         r"\b(?:uses|using|used|powered by|implemented|integrates with|"
@@ -252,7 +250,6 @@ def _extract_employee_size(text: str) -> str | None:
     if not text:
         return None
 
-    # Prefer exact counts reported in sentences or structured profile fields.
     exact_patterns = [
         r"(?i)\bemploys\s+([\d,]+)\s+people\b",
         r"(?i)\bhas\s+([\d,]+)\s+employees\b",
@@ -261,8 +258,6 @@ def _extract_employee_size(text: str) -> str | None:
         r"(?i)\b([\d,]+)\s+employees\b",
     ]
 
-    # Remove ranges before searching for standalone counts so that
-    # "51–200 employees" is never interpreted as "200 employees".
     text_without_ranges = re.sub(
         r"(?i)\b\d[\d,]*\s*[-–—]\s*\d[\d,]*\s+employees\b",
         " ",
